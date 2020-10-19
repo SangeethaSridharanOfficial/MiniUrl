@@ -1,0 +1,21 @@
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+.analy_wrappers{
+    @include posWidHei(fixed, 90%, 80%);
+    top: 65px;
+    left: 100px;
+
+    section{
+        display: inline-block;
+        @include posWidHei(relative, 80%, 100%);
+    }
+
+    aside{
+        @include posWidHei(relative, 20%, 100%); 
+        float: right;
+    }
+}

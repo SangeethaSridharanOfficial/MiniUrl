@@ -1,0 +1,19 @@
+@import './header.scss';
+@import './sidemenu.scss';
+@import './analytics.scss';
+
+
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+body{
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+.main_app_wrapper{
+    @include posWidHei(relative, 100%, auto);
+}

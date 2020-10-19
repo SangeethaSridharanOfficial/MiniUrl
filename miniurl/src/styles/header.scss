@@ -1,0 +1,130 @@
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+.header_wrapper{
+    background-image: linear-gradient(90deg, #169fe0, #309ccd, #3c9cc9, #3fb0e6, #3a9eca, #4eb0dd, #95d4f2);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 60px;
+
+    .headerp1_wrapper{
+        display: inline-flex;
+
+        .app_icon_holder{
+            box-shadow: 6px -4px 7px -6px #2f1366;
+            background-color: #80d2f7;
+        }
+
+        .header1{
+            display: inline-block;
+            margin-right: 7px;
+
+            .applogo{
+                @include posWidHei(unset, 52px, 50px);
+                margin-top: 5px;
+                border-radius: 50px;
+            }
+        }
+
+        .header1.acc_name_holder{
+            @include posWidHei(unset, 200px, 60px);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .acc_name{
+                color: white;
+                font-weight: bold;
+                // font-family: 'PT Sans', sans-serif;
+            }
+        }
+    }
+
+    .headerp2_wrapper{
+        display: inline-flex;
+        justify-content: flex-end;
+
+        .upgrade_holder, .addppl_holder, .tour_holder, .notif_holder, .profile_holder, .more_view_holder{
+            @include posWidHei(unset, auto, 60px);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            cursor: pointer;
+
+            .tourIcon, .adplIcon, .more_icon{
+                width: 25px;
+            }
+
+            .notifIcon{
+                width: 20px;
+            }
+
+            .profIcon{
+                width: 40px;
+            }
+
+            .upgrade_icon{
+                margin-right: 4px;
+                width: 16px;
+            }
+
+            .up_txt, .ppl_txt{
+                width: auto;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #117eaf;
+                padding: 6px;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                max-width: 150px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .more_opt_holder{
+                @include posWidHei(fixed, 250px , auto);
+                background-color: white;
+                top: 60px;
+                right: 20px;
+                box-shadow: 0px 0px 4px 0px #8fd1f0;
+                z-index: 20;
+
+                .menu_holder{
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+
+                    .menu_li{
+                        padding-left: 25px;
+                        height: 35px;
+                        background-color: white;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 1px solid #ebebeb;
+                    }
+
+                    .menu_li:hover{
+                        background-color: #127eaf;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .hideElement, .more_view_holder.hideOpt{
+            display: none;
+        }
+    }
+}
+
+

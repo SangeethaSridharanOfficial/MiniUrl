@@ -1,0 +1,22 @@
+{
+    "language" : {
+        "he.se" : "Search",
+        "cmp.n" : "Company Name",
+        "h.u.tt" : "Upgrade to basics",
+        "h.a.ppl" : "Add People",
+        "an.cou" : "Country",
+        "an.dt" : "Date",
+        "an.dev" : "Device",
+
+        "he.hto" : "Tour",
+        "he.hpr" : "Profile",
+        "he.hap" : "Add people",
+        "he.hnot" : "Notifications",
+        "s.ml.tt" : "My Links",
+        "s.ac.tt" : "Account Links",
+        "s.do.tt" : "Domain Links",
+        "f.al.tt" : "All",
+        "tp.sl.df" : "My Links",
+        "sb.sl.df": "All"
+    }
+}
